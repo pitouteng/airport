@@ -12,13 +12,13 @@
 
 using namespace std;
 
-
+/*
 void run(Airplane* ap)
 {
 	ap->land();
 
 } // end run
-
+*/
 
 int main(void)
 {
@@ -31,7 +31,9 @@ int main(void)
 	{
 		Airplane* ap = new Airplane(i, &as);
 
-		apths.push_back(thread(&run, ap));
+		apths.push_back(thread([] (Airplane* ap){
+			ap->land();
+		}, ap));
 	}
 
 	// Wait for all Airplane threads to terminate (shouldn't happen!)

@@ -23,12 +23,12 @@ public:
 	AirportServer()
 	{
 		// ***** Initialize any Locks and/or Condition Variables here as necessary *****
-	lck4L = std::unique_lock<std::mutex>(run4L);
-	lck4R = std::unique_lock<std::mutex>(run4R);
-	lck15L = std::unique_lock<std::mutex>(run15L);
-	lck15R = std::unique_lock<std::mutex>(run15R);
-	lck9 = std::unique_lock<std::mutex>(run9);
-	lck14 = std::unique_lock<std::mutex>(run14);
+        lck4L = std::unique_lock<std::mutex>(run4L);
+        lck4R = std::unique_lock<std::mutex>(run4R);
+        lck15L = std::unique_lock<std::mutex>(run15L);
+        lck15R = std::unique_lock<std::mutex>(run15R);
+        lck9 = std::unique_lock<std::mutex>(run9);
+        lck14 = std::unique_lock<std::mutex>(run14);
 
 	} // end AirportServer default constructor
 
